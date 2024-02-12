@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.color-scale-1 { background: #ebedf0; }
+.color-scale-2 { background: #daebed; }
+.color-scale-3 { background: #c6dbef; }
+.color-scale-4 { background: #b3cce3; }
+.color-scale-5 { background: #9ebbd7; }
+.color-scale-6 { background: #8aaacb; }
+.color-scale-7 { background: #7799bf; }
+.color-scale-8 { background: #6488b3; }
+.color-scale-9 { background: #5277a7; }
+.color-scale-10 { background: #4166a3; }
