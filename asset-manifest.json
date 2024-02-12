@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/YG4PRESIDENT/YG4PRESIDENT.github.io.git/static/css/main.13c50508.css",
+    "main.js": "/YG4PRESIDENT/YG4PRESIDENT.github.io.git/static/js/main.f121a5cf.js",
+    "static/js/592.8ef5b0ae.chunk.js": "/YG4PRESIDENT/YG4PRESIDENT.github.io.git/static/js/592.8ef5b0ae.chunk.js",
+    "index.html": "/YG4PRESIDENT/YG4PRESIDENT.github.io.git/index.html",
+    "main.13c50508.css.map": "/YG4PRESIDENT/YG4PRESIDENT.github.io.git/static/css/main.13c50508.css.map",
+    "main.f121a5cf.js.map": "/YG4PRESIDENT/YG4PRESIDENT.github.io.git/static/js/main.f121a5cf.js.map",
+    "592.8ef5b0ae.chunk.js.map": "/YG4PRESIDENT/YG4PRESIDENT.github.io.git/static/js/592.8ef5b0ae.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13c50508.css",
+    "static/js/main.f121a5cf.js"
+  ]
+}
