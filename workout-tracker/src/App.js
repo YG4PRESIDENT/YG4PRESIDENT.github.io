@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { db } from './firebaseConfig';
-import firebase from 'firebase/app';
+import { Timestamp } from 'firebase/firestore';
 import CalendarHeatmap from 'react-calendar-heatmap';
 import 'react-calendar-heatmap/dist/styles.css';
+import './App.css';
+
 
 function App() {
   const [values, setValues] = useState([]);
@@ -24,15 +26,14 @@ function App() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     await db.collection('workouts').add({
-      date: firebase.firestore.Timestamp.fromDate(new Date(date)),
+      date: Timestamp.fromDate(new Date(date)), // Update this line
       intensity: parseInt(intensity, 10)
     });
-
+  
     // Reset form
     setDate('');
     setIntensity(1);
   };
-
   return (
     <div className="App">
       <form onSubmit={handleSubmit}>
