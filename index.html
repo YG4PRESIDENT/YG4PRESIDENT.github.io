@@ -1,21 +1,62 @@
-<h1> HELLO WRLD!</h1>
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monopoly Music Player UI</title>
+<!-- Tailwind CSS -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+</head>
 <body>
+    <p> hello </p>
+<div class="flex justify-center items-center min-h-screen">
+  <div id="monopoly-board" class="grid grid-cols-11 gap-1 p-4 bg-gray-100">
+    <!-- Board spaces will be added here -->
+  </div>
+  <div id="equalizer" class="flex justify-center items-center h-32">
+    <!-- Equalizer bars will be added here -->
+  </div>
+  <div id="player-controls" class="flex justify-between items-center">
+    <!-- Player controls and tracklist will be added here -->
+  </div>
+</div>
 
+<script>
+  // Function to generate equalizer bars
+  function generateEqualizer() {
+    const equalizer = document.getElementById('equalizer');
+    for (let i = 0; i < 20; i++) { // Number of bars
+      const bar = document.createElement('div');
+      bar.classList.add('equalizer-bar');
+      equalizer.appendChild(bar);
+    }
+  }
 
-    <p>Bio</p>
-    <p>Mission statements and goals</p>
+  // Function to populate tracklist
+  function populateTracklist() {
+    const tracks = [
+      { title: 'Llama Whippin\' Intro', duration: '0:05' },
+      { title: 'Heroines', artist: 'Diablo Swing Orchestra', duration: '5:22' },
+      { title: 'We Are Going To Elecfunk Your ...', artist: 'Eclectek', duration: '3:10' },
+      { title: 'Seventeen', artist: 'Auto-Pilot', duration: '3:34' }
+      // Add more tracks as needed
+    ];
+    const tracklist = document.getElementById('tracklist');
+    tracks.forEach((track, index) => {
+      const li = document.createElement('li');
+      li.textContent = `${index + 1}. ${track.title} - ${track.artist || ''} ${track.duration}`;
+      tracklist.appendChild(li);
+    });
+  }
 
-    <p>Things I am reading or have read recently</p>
+  // Initializing functions
+  document.addEventListener('DOMContentLoaded', () => {
+    generateEqualizer();
+    populateTracklist();
+  });
 
-    <p>Travel experiences</p>
-
-    <p>Blog component about life</p>
-
-    <p> Projects / building </p>
-
-    <p>IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII</p>
-    <p>dddddddddddddddd</p>
-    <p>i</p>
+  // Add more functionality as needed for interactions
+</script>
 </body>
+</html>
