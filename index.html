@@ -1,62 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Monopoly Music Player UI</title>
-<!-- Tailwind CSS -->
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
-<link href="index.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Travel Adventures</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <p> hello !!! </p>
-<div class="flex justify-center items-center min-h-screen">
-  <div id="monopoly-board" class="grid grid-cols-11 gap-1 p-4 bg-gray-100">
-    <!-- Board spaces will be added here -->
+  <div class="board">
+    <header class="board-header">
+      <h1>My Travel Adventures</h1>
+    </header>
+    
+    <nav class="board-nav">
+      <a href="#">Home</a>
+      <a href="#">Photos</a>  
+      <a href="#">Blog</a>
+      <a href="#">Articles</a>
+      <a href="#">Quest List</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <main class="board-main">
+      <article>
+        <h2>Latest Blog Post</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <a href="#">Read more</a>
+      </article>
+    </main>
+
+    <aside class="board-aside">
+      <h2>Featured Photo</h2>
+      <img src="featured-photo.jpg" alt="Featured travel photo">
+    </aside>
+
+    <footer class="board-footer">
+      <p>&copy; 2024 My Travel Adventures</p>
+    </footer>
   </div>
-  <div id="equalizer" class="flex justify-center items-center h-32">
-    <!-- Equalizer bars will be added here -->
-  </div>
-  <div id="player-controls" class="flex justify-between items-center">
-    <!-- Player controls and tracklist will be added here -->
-  </div>
-</div>
-
-<script>
-  // Function to generate equalizer bars
-  function generateEqualizer() {
-    const equalizer = document.getElementById('equalizer');
-    for (let i = 0; i < 20; i++) { // Number of bars
-      const bar = document.createElement('div');
-      bar.classList.add('equalizer-bar');
-      equalizer.appendChild(bar);
-    }
-  }
-
-  // Function to populate tracklist
-  function populateTracklist() {
-    const tracks = [
-      { title: 'Llama Whippin\' Intro', duration: '0:05' },
-      { title: 'Heroines', artist: 'Diablo Swing Orchestra', duration: '5:22' },
-      { title: 'We Are Going To Elecfunk Your ...', artist: 'Eclectek', duration: '3:10' },
-      { title: 'Seventeen', artist: 'Auto-Pilot', duration: '3:34' }
-      // Add more tracks as needed
-    ];
-    const tracklist = document.getElementById('tracklist');
-    tracks.forEach((track, index) => {
-      const li = document.createElement('li');
-      li.textContent = `${index + 1}. ${track.title} - ${track.artist || ''} ${track.duration}`;
-      tracklist.appendChild(li);
-    });
-  }
-
-  // Initializing functions
-  document.addEventListener('DOMContentLoaded', () => {
-    generateEqualizer();
-    populateTracklist();
-  });
-
-  // Add more functionality as needed for interactions
-</script>
+  
+  <script src="index.jsx"></script>
 </body>
 </html>
