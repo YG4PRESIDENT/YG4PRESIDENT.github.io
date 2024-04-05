@@ -6,75 +6,68 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;  
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.board {
-  max-width: 900px;
-  margin: 20px auto;
+.game-board {
+  width: 900px;
+  height: 900px;
   background-color: #fff;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-  grid-template-areas: 
-    "header header header"
-    "nav main aside"
-    "footer footer footer";
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2px;
   border: 4px solid #000;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.board-header {
-  grid-area: header;
-  text-align: center;
-  padding: 10px;
-  background-color: #f44336; 
-  color: #fff;
-}
-
-.board-nav {
-  grid-area: nav;
+.corner, .property {
   display: flex;
-  flex-direction: column;
-}
-
-.board-nav a {
-  background-color: #4CAF50;
-  color: #fff;
-  text-align: center;
-  padding: 12px 16px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.board-nav a:hover {
-  background-color: #45a049;
-}  
-
-.board-main {
-  grid-area: main;
-}
-
-.board-aside {
-  grid-area: aside;
-  display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-}
-
-.board-aside img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 10px;
-}
-
-.board-footer {
-  grid-area: footer;
   text-align: center;
   padding: 10px;
-  background-color: #333;
-  color: #fff;  
+  font-weight: bold;
+  color: #fff;
+}
+
+.go {
+  background-color: #f44336;
+}
+
+.visit {
+  background-color: #ff9800;  
+}
+
+.adventure {
+  background-color: #4caf50;
+}
+
+.treasure {
+  background-color: #2196f3;
+}
+
+.property {
+  background-color: #9c27b0;
+}
+
+.property.vertical {
+  transform: rotate(-90deg);
+}
+
+.center {
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+}
+
+.center-content {
+  text-align: center;
 }
