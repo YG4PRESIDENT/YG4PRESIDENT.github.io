@@ -1,0 +1,1 @@
+just testing this out here. I look forward to writing more and uploading my thoughts for the wrld to see.
